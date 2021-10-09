@@ -1,10 +1,24 @@
 import React from "react";
-import "../styles.css"
-export default function Home(){
-    console.log("API IS",process.env.REACT_APP_BACKEND)
-    return(
-        <div>
-            <h1 className="text-white">Hello FRont end</h1>
+import "../styles.css";
+import { API } from "../backend";
+import Base from "./Base";
+
+export default function Home() {
+  console.log("API IS", API);
+
+  return (
+    <Base title="Home Page">
+      <div className="row">
+        <div className="col-4">
+          <button className="btn btn-success">TEST</button>
         </div>
-    )
+        <div className="col-4">
+          <button className="btn btn-success">TEST</button>
+        </div>
+        <div className="col-4">
+          <button className="btn btn-success">TEST</button>
+        </div>
+      </div>
+    </Base>
+  );
 }
