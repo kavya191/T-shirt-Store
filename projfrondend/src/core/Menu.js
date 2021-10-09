@@ -5,7 +5,7 @@ const currentTab=(history,path)=>{
     if(history.location.pathname === path){
         return{color:"#2ecc72"}
     }else{
-        return {color:"FFFFFF"}
+        return {color:"FFFFFFF"}
     }
 }
 
@@ -38,14 +38,14 @@ const Menu=({history})=> (
 
         </li>
         <li className="nav-item">
-            <Link  style={currentTab(history,"/signup")}  className="nav-link " to="/signup">
+            <Link  style={currentTab(history,"/Signup")}  className="nav-link " to="/Signup">
             Sign Up
             </Link>
 
         </li>
         
         <li className="nav-item">
-            <Link style={currentTab(history,"/signin")} className="nav-link " to="/signin">
+            <Link style={currentTab(history,"/Signin")} className="nav-link " to="/Signin">
             Sign In
             </Link>
 
