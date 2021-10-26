@@ -13,14 +13,15 @@ const admin=(req,res)=>{
 };
 const isAdmin=(req,res,next)=>{
     console.log("isAdmin is running");
-    next();
+    next();// costomerized middleware
 }
 
-const isLoggedIn=(req,res)=>{
+const isLoggedIn=(req,res,next)=>{
     console.log("isLoggedIn");
+    next()
 }
 
- app.get("/admin", isAdmin,isLoggedIn,admin)
+ app.get("/admin", isAdmin,isLoggedIn,admin)// middleware b/w req,res
  
 
 //   app.get("/admin",(req,res)=>{
